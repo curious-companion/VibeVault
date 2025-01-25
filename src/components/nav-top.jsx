@@ -1,6 +1,8 @@
 import '../styles.css';
 import './styles/navTop.css';
 import './styles/HomeSearch.css';
+import home from '../assets/SVGs/home.svg';
+import search from '../assets/SVGs/search.svg';
 
 const NavTop = ()=>{
     return(
@@ -8,12 +10,12 @@ const NavTop = ()=>{
                 <ul>
                     <li>
                         <button className="home-button">
-                            <img src="home.svg" alt="Home" />
+                            <img src={home} alt="Home" />
                         </button>
                     </li>
                     <li>
                         <button className="search-button">
-                            <img src="search.svg" alt="Search" />
+                            <img src={search} alt="Search" />
                         </button>
                     </li>
                 </ul>
