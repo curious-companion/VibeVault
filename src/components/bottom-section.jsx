@@ -3,7 +3,7 @@ import './styles/bottomSection.css'
 
 const BottomSection = ({children})=>{
     return(
-        <div>
+        <div className="bottom-section">
             {children}
         </div>
     );

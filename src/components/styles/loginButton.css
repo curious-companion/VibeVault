@@ -11,7 +11,7 @@
     
   }
   .signupbtn{
-    width: 80px;
+    width: 118px;
     height: 48px;
     background-color: #121212;
     color: gray;
@@ -27,7 +27,7 @@
     background-color: white;
     color: black;
     border-radius: 100px;
-    width: 58%;
+    width: 120px;
     padding: 8px 32px;
   }
   .loginbtn:hover{

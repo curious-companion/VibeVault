@@ -1,10 +1,11 @@
 import PropTypes from "prop-types";
 import '../styles.css';
 import './styles/topSection.css'
+import './styles/topSection.css';
 
 const TopSection = ({children})=>{
     return(
-        <div>
+        <div className="top-section">
             {children}
         </div>
     );

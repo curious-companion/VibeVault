@@ -1,8 +1,9 @@
 import '../../components/styles/navArrow.css';
+import leftArrow from '../SVGs/left-arrow.svg';
 
 const LeftArrow = ()=>{
     return(
-        <img src="left-arrow.svg" alt="left" className="nav-arrow" />
+        <img src={leftArrow} alt="left" className="nav-arrow" />
     );
 };
 export default LeftArrow

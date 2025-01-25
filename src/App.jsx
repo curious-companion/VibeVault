@@ -1,4 +1,4 @@
-import '../styles.css';
+import './styles.css'
 import Container from './components/container'
 import TopSection from './components/top-section'
 import BottomSection from './components/bottom-section'

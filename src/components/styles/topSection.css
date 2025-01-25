@@ -2,5 +2,6 @@
     display: flex;
     align-items: center; /* Vertically center items */
     background-color: #121212;
-    padding: 1px;
+    padding: 2px;
+    width: 100%;
 }
