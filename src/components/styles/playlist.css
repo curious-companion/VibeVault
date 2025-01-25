@@ -1,0 +1,18 @@
+.playlist{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 15px;
+    cursor: pointer;
+    padding: 23px 14px;
+    padding-top: 14px;
+    
+}
+.playlist h2{
+    font-size: 16px;
+    margin: 0px;
+    white-space: nowrap; 
+}
+.playlist h2:hover{
+    color: #ffffff;
+}

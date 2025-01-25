@@ -1,0 +1,36 @@
+.btn-container{
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+  }
+  .signupbtn,.loginbtn{
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 0;
+    margin-right: 10px;
+    
+  }
+  .signupbtn{
+    width: 80px;
+    height: 48px;
+    background-color: #121212;
+    color: gray;
+    border: none;
+    outline: none;
+    padding: 8px px 8px 8px;
+  }
+  .signupbtn:hover{
+    color: white;
+    transform: scale(1.1);
+  }
+  .loginbtn{
+    background-color: white;
+    color: black;
+    border-radius: 100px;
+    width: 58%;
+    padding: 8px 32px;
+  }
+  .loginbtn:hover{
+    background-color: gray;
+    transform: scale(1.1);
+  }

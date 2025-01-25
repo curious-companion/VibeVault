@@ -1,0 +1,15 @@
+.right {
+    flex: 1;
+    background-color: #2a2a2a;
+    padding: 10px;
+    position: relative;
+}
+.right h4{
+    margin-top: auto;
+}
+.right h4:hover{
+    color: #ffffff;
+}
+.right h2:hover{
+    color: #ffffff;
+}

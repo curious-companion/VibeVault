@@ -1,0 +1,17 @@
+.home-button,
+.search-button {
+    background-color: #1f1f1f;
+    border: 2px ridge #1f1f1f;
+    border-radius: 100%; 
+    cursor: pointer; 
+    padding: 10px; 
+}
+.home-button:hover,.search-button:hover{
+    transform: scale(1.2);
+}
+
+.home-button img,
+.search-button img {
+    width: 24px; 
+    height: auto; 
+}

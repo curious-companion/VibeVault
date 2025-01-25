@@ -1,0 +1,8 @@
+.nav-arrow{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+.nav-arrow:hover{
+    transform: scale(1.3);
+}

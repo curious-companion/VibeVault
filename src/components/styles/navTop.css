@@ -1,0 +1,19 @@
+.nav-top {
+    flex: 1; /* Take remaining space */
+    display: flex;
+    justify-content: center; /* Center nav items horizontally */
+    height: 10vh
+}
+
+.nav-top ul {
+    padding: 0;
+    display: flex; /* Make the list items horizontal */
+    list-style-type: none; /* Remove bullet points */
+    margin: 0; /* Remove default margin */
+}
+
+.nav-top li {
+    margin: 0 15px; /* Space between list items */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+}

@@ -1,0 +1,25 @@
+.songList{
+    height: 600px;
+    overflow: auto;
+  }
+  /* For WebKit browsers (Chrome, Safari, etc.) */
+  .songList::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+  }
+  .songList ul{
+    padding: 0 22px;
+  }
+  .songList ul li{
+    list-style-type: decimal;
+    display: flex;
+    gap: 14px;
+    cursor: pointer;
+    padding: 12px 0;
+    margin: 2px;
+  }
+  .songList ul li:hover{
+    color: #ffffff;
+  }
+  .songList ul li img:hover{
+    transform: scale(1.2);
+  }

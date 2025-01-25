@@ -1,0 +1,6 @@
+.top-section {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    background-color: #121212;
+    padding: 1px;
+}

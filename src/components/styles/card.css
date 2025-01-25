@@ -1,0 +1,17 @@
+.card{
+    width: 200px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #252525;
+    position: relative;
+  }
+  .image-container{
+    position: relative;
+  }
+  .card > *{
+    padding-top: 10px;
+  }
+  .card img{
+    width: 100%;
+    object-fit: cover;
+  }
