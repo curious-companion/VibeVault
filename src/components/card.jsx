@@ -1,4 +1,5 @@
 import '../styles.css';
+import './styles/card.css';
 
 const Card = ()=>{
     return(

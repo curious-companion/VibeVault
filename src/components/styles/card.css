@@ -5,13 +5,33 @@
     background-color: #252525;
     position: relative;
   }
-  .image-container{
+.image-container{
     position: relative;
-  }
-  .card > *{
+}
+.card > *{
     padding-top: 10px;
-  }
-  .card img{
+}
+.card img{
     width: 100%;
     object-fit: cover;
-  }
+}
+.play-button{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+}
+.card:hover img{
+    filter: blur(3px);
+}
+.card:hover .play-button{
+    display: block;
+}
+.image-container:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.play-button:hover circle{
+    fill:#ffffff;
+}

@@ -1,18 +1,52 @@
-.playlist{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: 15px;
+
+.playlistPage{
+    padding: 16px;
+  }
+  .playlistPage h1{
+    width: 15%;
+    color: white;
+    text-decoration: none;
+    font-size: 32px;
+  }
+  .playlistPage h1:hover{
+    text-decoration: underline;
     cursor: pointer;
-    padding: 23px 14px;
-    padding-top: 14px;
-    
-}
-.playlist h2{
-    font-size: 16px;
-    margin: 0px;
-    white-space: nowrap; 
-}
-.playlist h2:hover{
-    color: #ffffff;
-}
+  }
+  .cardContainer{
+    margin: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    max-height: 60vh;
+  }
+  /* Scrollbar styles for a dark theme */
+  .cardContainer::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+  }
+  
+  .cardContainer::-webkit-scrollbar-track {
+    background: #2a2a2a; /* Scrollbar track color (matches your dark background) */
+    border-radius: 10px; /* Rounded corners for the track */
+  }
+  
+  .cardContainer::-webkit-scrollbar-thumb {
+    background-color: #FF6F61; /* Scrollbar color (matches your site's accent color) */
+    border-radius: 10px; /* Rounded corners for the thumb */
+    border: 2px solid #2a2a2a; /* Border around the scrollbar thumb */
+  }
+  
+  .cardContainer::-webkit-scrollbar-thumb:hover {
+    background-color: #FF4C41; /* Darker color when hovered for a fancy effect */
+  }
+  
+  /* Remove scrollbar arrows */
+  .cardContainer::-webkit-scrollbar-button {
+    display: none; /* Hide the scrollbar arrows */
+  }
+  
+  /* Firefox scrollbar */
+  .cardContainer {
+    scrollbar-width: thin; /* Thin scrollbar */
+    scrollbar-color: #FF6F61 #2a2a2a; /* Thumb color and track color */
+  }

@@ -1,4 +1,4 @@
-
+import '../../components/styles/navArrow.css';
 
 const RightArrow = ()=>{
     return(

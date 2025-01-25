@@ -1,4 +1,5 @@
 import '../styles.css';
+import './styles/playBar.css';
  const SongButton = ()=>{
      return(<>
      
