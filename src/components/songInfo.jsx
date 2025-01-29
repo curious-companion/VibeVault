@@ -3,7 +3,6 @@ import './styles/playBar.css';
 const SongInfo = ()=>{
     return(
         <div className="song-info">
-
         </div>
     );
 };

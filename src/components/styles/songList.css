@@ -1,5 +1,4 @@
 .songList{
-    height: 600px;
     overflow: auto;
   }
   /* For WebKit browsers (Chrome, Safari, etc.) */

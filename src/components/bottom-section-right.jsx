@@ -3,15 +3,22 @@ import './styles/BottomSectionRight.css';
 import Header from "./header";
 import PlayListPage from "./playlistPage";
 import PlayBar from "./playBar";
+import PropTypes from 'prop-types';
 
 
-const BottomSectionRight = ()=>{
+const BottomSectionRight = ({songs, currentSong})=>{
     return(
         <div className="right roboto-bold font-color">
             <Header />
             <PlayListPage />
-            <PlayBar />
+            <PlayBar songs={songs} currentSong={currentSong} />
         </div>
     )
 }
-export default BottomSectionRight
+
+BottomSectionRight.propTypes = {
+    songs: PropTypes.array.isRequired,
+    currentSong: PropTypes.string.isRequired,
+};
+
+export default BottomSectionRight;
