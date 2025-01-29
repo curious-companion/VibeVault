@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
+import PropTypes from "prop-types";
 import '../styles.css'
 import './styles/bottomSectionLeft.css';
 import Close from "../assets/icons/close";
@@ -6,29 +7,21 @@ import SongList from "../components/song-list";
 import playlist from '../assets/SVGs/playlist.svg';
 import DownArrow from '../assets/SVGs/down-arrow.svg';
 
-const BottomSectionLeft = ()=>{
+const BottomSectionLeft = ({songs, onSongSelect})=>{
     const[isDropdownVisible,setDropdownVisible] = useState(false);
-    const[songs,setSongs] = useState([]);
 
-    //fetch the songs when the components is mounted
-    useEffect(()=>{
-        async function fetchSongs() {
-            try{
-                const response = await fetch("http://localhost:3001/songs");
-                const songList = await response.json();
-                console.log("Fetched Song List:", songList);
-                setSongs(songList);
-            } catch(error){
-                console.error("Error fetching Songs", error);
-            }
-        }
-        
-        fetchSongs();
-    }, []);
-
+    
     const toggleDropdown = () =>{
         setDropdownVisible(!isDropdownVisible);
     };
+
+    //Handling Song Click
+    const handleSongClick = (song) =>{
+        if(onSongSelect){
+            onSongSelect(song);
+        }
+    };
+
 
     return(
             <div className="left roboto-bold">
@@ -42,8 +35,17 @@ const BottomSectionLeft = ()=>{
                     className={`arrow ${isDropdownVisible ? 'rotate' : ''}`}/>
                 </div>
 
-                {isDropdownVisible && <SongList songs = {songs}/>}
+                {isDropdownVisible && 
+                (<SongList songs = {songs} onSongClick={handleSongClick} />)}
+
             </div>
     );
 };
-export default BottomSectionLeft
+
+BottomSectionLeft.propTypes = {
+    songs: PropTypes.array.isRequired,
+    onSongSelect: PropTypes.func.isRequired,
+};
+
+
+export default BottomSectionLeft;
