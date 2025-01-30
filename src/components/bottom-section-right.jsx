@@ -18,7 +18,7 @@ const BottomSectionRight = ({songs, currentSong})=>{
 
 BottomSectionRight.propTypes = {
     songs: PropTypes.array.isRequired,
-    currentSong: PropTypes.string.isRequired,
+    currentSong: PropTypes.object,
 };
 
 export default BottomSectionRight;

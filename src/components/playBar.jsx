@@ -12,6 +12,7 @@ const PlayBar = ({songs, currentSong})=>{
     const[isPlaying, setIsPlaying] = useState(false);
     const[currentIndex, setCurrentIndex]  = useState(0);
     const[isShuffleOn, setIsShuffleOn] = useState(false);
+    const[isRepeatOn, setIsRepeatOn] = useState(false);
     const audioRef = useRef(null);
 
     //Inittializing the audio object
@@ -35,14 +36,14 @@ const PlayBar = ({songs, currentSong})=>{
     };
 
     useEffect(()=>{
-        if(currentSong){
+        if(currentSong && currentSong.url){
             const index = songs.findIndex(song => song.url === currentSong.url);
-            if(index !== -1){
+            if(index !== -1 && currentIndex!==index){
                 setCurrentIndex(index);
             }
             playSong(currentSong);
         }
-    },[currentSong, songs]);
+    },[currentSong, songs,currentIndex]);
 
 
     //Play or Pause
@@ -78,7 +79,9 @@ const PlayBar = ({songs, currentSong})=>{
 
     //To handle Repeat
     const handleRepeat = () => {
-        audioRef.current.loop = !audioRef.current.loop;
+        const newRepeatState = !isRepeatOn;
+        setIsRepeatOn(newRepeatState);
+        audioRef.current.loop = newRepeatState;
     };
 
     //To play a song at any Index
@@ -91,7 +94,7 @@ const PlayBar = ({songs, currentSong})=>{
                 audioRef.current.load();
                 audioRef.current.play()
                     .then(() => setIsPlaying(true))
-                 .catch(error => console.error("Error playing song:", error));
+                    .catch(error => console.error("Error playing song:", error));
             }
         setCurrentIndex(index);
         }
@@ -99,9 +102,11 @@ const PlayBar = ({songs, currentSong})=>{
 
     return(
         <div className="playbar">
-            <SongInfo song = {songs[currentIndex]} />
+            <SongInfo song = {currentSong || {title: "Unknown", url: ""}} />
             <SongButton
                 isPlaying={isPlaying}
+                isShuffleOn = {isShuffleOn}
+                isRepeatOn = {isRepeatOn}
                 togglePlayPause={togglePlayPause}
                 handleNext={handleNext}
                 handlePrevious={handlePrevious}

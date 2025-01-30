@@ -1,0 +1,6 @@
+.song-info{
+    color: black;
+    display: flex;
+    padding: 0;
+    position: fixed;
+}
