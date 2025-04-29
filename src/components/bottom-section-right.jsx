@@ -1,5 +1,5 @@
 import '../styles.css';
-import './styles/BottomSectionRight.css';
+import './styles/bottomSectionRight.css';
 import Header from "./header";
 import PlayListPage from "./playlistPage";
 import PlayBar from "./playBar";
